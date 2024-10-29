@@ -87,7 +87,8 @@ for i in range(epoch):
             outputs = tudui(imgs)
             loss = loss_fn(outputs, targrts)
             total_test_loss += loss.item()
-        print("整体测试集上的Loss：{}".format(total_test_loss)) 
-        writer.add_scalar("test_loss", total_test_loss, total_test_step)
+    print("整体测试集上的Loss：{}".format(total_test_loss)) 
+    writer.add_scalar("test_loss", total_test_loss, total_test_step)
+
 writer.close()
 
